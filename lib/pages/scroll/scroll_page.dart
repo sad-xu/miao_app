@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:miao_app/pages/scroll/search_scroll.dart';
 
 import '../../router/navigator_utils.dart';
+import 'index_list_page.dart';
 import 'nested_scroll_page.dart';
 
 class ScrollPage extends StatefulWidget {
@@ -33,6 +34,12 @@ class _ScrollPageState extends State<ScrollPage> {
                     SearchScrollPage.pageName);
               },
               child: const Text('SearchScrollPage')),
+          TextButton(
+              onPressed: () {
+                NavigatorUtils.defaultPush(
+                    context, const IndexListPage(), IndexListPage.pageName);
+              },
+              child: const Text('IndexListPage')),
         ],
       ),
     );
