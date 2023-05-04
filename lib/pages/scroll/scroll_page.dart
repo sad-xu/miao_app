@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:miao_app/pages/scroll/search_scroll.dart';
 
 import '../../router/navigator_utils.dart';
+import 'custom_header_scroll_page.dart';
 import 'index_list_page.dart';
 import 'nested_scroll_page.dart';
 
@@ -40,6 +41,14 @@ class _ScrollPageState extends State<ScrollPage> {
                     context, const IndexListPage(), IndexListPage.pageName);
               },
               child: const Text('IndexListPage')),
+          TextButton(
+              onPressed: () {
+                NavigatorUtils.defaultPush(
+                    context,
+                    const CustomHeaderScrollPage(),
+                    CustomHeaderScrollPage.pageName);
+              },
+              child: const Text('CustomHeaderScrollPage')),
         ],
       ),
     );
